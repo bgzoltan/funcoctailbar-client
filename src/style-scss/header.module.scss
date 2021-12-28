@@ -1,0 +1,53 @@
+@import "./variables";
+
+#container {
+     font-family: "Caveat", cursive;
+     top: 0px;
+     width: 100%;
+     text-align: center;
+     font-size: $XL;
+     color: $color1;
+     background-color: $bgColor2;
+     #header {
+          display: flex;
+          background-color: black;
+          height: 100px;
+          #left,
+          #right {
+               display: flex;
+               flex-direction: column;
+               justify-content: flex-start;
+               width: 30%;
+               background-color: black;
+               div {
+                    height: 50px;
+                    background-color: $bgColor3;
+               }
+          }
+          #middle {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: flex-start;
+               width: 40%;
+               border-radius: 0px 0px 150px 150px;
+               background-color: $bgColor3;
+               z-index: 2;
+               div {
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    z-index: 0;
+                    width: 100%;
+                    height: 50px;
+                    background-color: $bgColor3;
+                    div {
+                         width: auto;
+                         position: absolute;
+                         top: 20px;
+                         text-shadow: 2px 2px black;
+                    }
+               }
+          }
+     }
+}

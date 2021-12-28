@@ -1,0 +1,30 @@
+.box {
+  position: absolute;
+  width: 100px;
+  height: 100px; }
+
+#box1 {
+  background-color: red; }
+
+#box2 {
+  background-color: #2b379e; }
+
+#box3 {
+  background-color: #0d681c; }
+
+#box4 {
+  background-color: #54ac63; }
+
+#box5 {
+  background-color: #ca710b; }
+
+#box6 {
+  background-color: #680d59; }
+
+#box7 {
+  background-color: #853e6a; }
+
+#box8 {
+  background-color: #3c97b3; }
+
+/*# sourceMappingURL=intro.css.map */

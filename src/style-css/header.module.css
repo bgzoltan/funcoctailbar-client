@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+#container {
+  font-family: "Caveat", cursive;
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
+  color: #cef132;
+  background-color: #7f810c; }
+  #container #header {
+    display: flex;
+    background-color: black;
+    height: 100px; }
+    #container #header #left,
+    #container #header #right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 30%;
+      background-color: black; }
+      #container #header #left div,
+      #container #header #right div {
+        height: 50px;
+        background-color: #7f810c; }
+    #container #header #middle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      width: 40%;
+      border-radius: 0px 0px 150px 150px;
+      background-color: #7f810c;
+      z-index: 2; }
+      #container #header #middle div {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #7f810c; }
+        #container #header #middle div div {
+          width: auto;
+          position: absolute;
+          top: 20px;
+          text-shadow: 2px 2px black; }
+
+/*# sourceMappingURL=header.module.css.map */

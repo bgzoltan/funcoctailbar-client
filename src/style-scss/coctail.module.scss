@@ -1,0 +1,168 @@
+@import "./variables";
+
+#mainContainer {
+     font-family: 'Caveat', cursive;
+     box-sizing: border-box;
+     margin: 0px;
+     padding: 0px;
+     display: flex;
+     position: relative;
+     flex-direction: column;
+     width: 100%;
+     flex-grow: 1;
+     background-color: black;
+
+     #container {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          font-size: $L;
+          color: $color2;
+          text-align: center;
+          flex-grow: 1;
+
+          #pictureBack {
+               display: flex;
+               justify-content: center;
+               position: relative;
+               background-repeat: no-repeat;
+               background-size:contain;
+               background-position-x: 100%;
+               z-index: 0;
+               background-image: url("..//images/coctail-background.jpg");
+                 height: 720px;
+               margin: 0px;
+               #left {
+                    width: 30%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    #picture {
+                                  opacity: 80%;
+                         border-radius: 50%;
+                         border: 15px solid $bgColor3;
+                         width: 500px;
+                    }
+               }
+               #right {
+                    width: 60%;
+                    #details {
+                                    margin-left: 100px;
+                         width: 300px;
+                         height: 720px;
+                         padding: 0px;
+                         color: rgb(182, 243, 60);
+                                background-color: rgba(153, 49, 49, 0);
+                         background-repeat: no-repeat;
+                         background-size: contain;
+                         opacity: 80%;
+                         background-image: url("..//images/bottle-background-new2.png");
+                         transform: rotate(-20deg);
+                         border-radius: 50px;
+                         display: flex;
+                             align-items: center;
+                         flex-direction: column;
+                         overflow: hidden;
+                         #coctailName {
+                              margin: 45px;
+                              height: 220px;
+            
+                              display: flex;
+                              align-items: center;
+                              h2 {
+                                                                  width: 220px;
+                                   height:auto;
+                                                         font-size: $L * 0.8;
+                                   text-shadow: 2px 2px black;
+                                   transform: rotate(90deg);
+                              }
+                         }
+                         ul {
+                              padding: 0px;
+                              margin: 0px;
+                              padding-top:0px;
+                              font-size: $M*0.7;
+                              width: 140px;
+                              list-style: none;
+                              li {
+                                   text-align: left;
+                                   text-shadow: 1px 1px black;
+                                   width: 200px;
+                                   line-height: 22px;
+                              }
+                         }
+
+                         p {
+                              box-sizing: border-box;
+                              text-align: justify;
+                              width: 300px;
+                              padding: 21px;
+                              margin: 0px;
+                              font-size: $M * 0.7;
+                              text-shadow: 1px 1px black;
+   
+                         }
+                    }
+                    #details:hover{
+                         transform: rotate(-35deg);
+                    }
+               }
+          }
+     }
+
+     #coctailListContainer {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          
+          #coctailOfListedCoctails{
+               // width: 30%;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               margin: 10px;
+               cursor: pointer;
+               #picture {
+                             opacity: 80%;
+                    border-radius: 50%;
+                    border: 15px solid $bgColor3;
+                    width: 300px;
+               }
+               #name{
+                    font-size: $M;
+                    color: $color3;
+
+               }
+               
+          }
+     }
+
+     #navigation {
+          position: absolute;
+          font-family: 'Caveat', cursive;
+          top:-90px;
+          left:0px;
+          width:100%;
+          display: flex;
+           
+          }
+}
+
+@media only screen and (max-width: 600px) {
+     #mainContainer {
+          #container {
+               width: 100%;
+               display: flex;
+               flex-direction: column;
+               margin: 0px;
+               #picture {
+                    width: 100%;
+               }
+               #details {
+                    width: 100%;
+                    padding: 10px;
+               }
+          }
+     }
+}

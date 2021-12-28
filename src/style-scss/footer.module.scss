@@ -1,0 +1,10 @@
+@import "./variables";
+
+#container {
+     font-family: "Caveat", cursive;
+     width: 100%;
+     text-align: center;
+     font-size: $M;
+     color: $color1;
+     background-color: $bgColor2;
+}

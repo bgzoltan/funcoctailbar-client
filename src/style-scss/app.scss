@@ -1,0 +1,28 @@
+body {
+     width:100vw;
+     box-sizing: border-box;
+     margin:0px;
+     padding:0px;
+}
+
+#app {
+
+   
+     #intro {
+          text-align: center;
+          display: flex;
+          position: relative;
+          width:100%;
+          height:100%;
+     }
+
+     #coctails {
+          display:flex;
+          flex-direction: column;
+          width: 100%;
+          min-height: 100vh;
+          justify-content: center;
+          align-items: center;
+     }
+
+   }
