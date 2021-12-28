@@ -38,7 +38,7 @@
                     justify-content: center;
                     align-items: center;
                     #picture {
-                                  opacity: 0.8;
+                                  opacity: 1;
                          border-radius: 50%;
                          border: 15px solid $bgColor3;
                          width: 500px;
@@ -124,7 +124,7 @@
                margin: 10px;
                cursor: pointer;
                #picture {
-                             opacity: 0.8;
+                             opacity: 1;
                     border-radius: 50%;
                     border: 15px solid $bgColor3;
                     width: 300px;
