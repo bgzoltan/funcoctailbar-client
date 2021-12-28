@@ -38,7 +38,7 @@
                     justify-content: center;
                     align-items: center;
                     #picture {
-                                  opacity: 80%;
+                                  opacity: 0.8;
                          border-radius: 50%;
                          border: 15px solid $bgColor3;
                          width: 500px;
@@ -55,7 +55,7 @@
                                 background-color: rgba(153, 49, 49, 0);
                          background-repeat: no-repeat;
                          background-size: contain;
-                         opacity: 80%;
+                         opacity: 0.8;
                          background-image: url("..//images/bottle-background-new2.png");
                          transform: rotate(-20deg);
                          border-radius: 50px;
@@ -124,7 +124,7 @@
                margin: 10px;
                cursor: pointer;
                #picture {
-                             opacity: 80%;
+                             opacity: 0.8;
                     border-radius: 50%;
                     border: 15px solid $bgColor3;
                     width: 300px;
