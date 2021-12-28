@@ -58,17 +58,16 @@ function Intro({ setIsIntro }) {
     }
   }
 
-  // Creating box objects
-
-  const box1 = new Box("box1", 100, 100, "blue");
-  const box2 = new Box("box2", 100, 100, "red");
-  const box3 = new Box("box3", 100, 100, "yellow");
-  const box4 = new Box("box4", 100, 100, "pink");
-  const box5 = new Box("box5", 100, 100, "green");
-  const box6 = new Box("box6", 100, 100, "black");
-  const box7 = new Box("box7", 100, 100, "orange");
-
   useEffect(() => {
+    // Creating box objects
+
+    const box1 = new Box("box1", 100, 100, "blue");
+    const box2 = new Box("box2", 100, 100, "red");
+    const box3 = new Box("box3", 100, 100, "yellow");
+    const box4 = new Box("box4", 100, 100, "pink");
+    const box5 = new Box("box5", 100, 100, "green");
+    const box6 = new Box("box6", 100, 100, "black");
+    const box7 = new Box("box7", 100, 100, "orange");
     const delay = (maxTransitionTime) => {
       //  Box display delaying between different box positions - the delay time is the maximum transition time in the position group
       return new Promise(function (resolve) {
