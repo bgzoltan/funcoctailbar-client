@@ -13,7 +13,7 @@
      height: 300px;
      text-align: center;
           color: $color1;
-     background-color: $bgColor3;
+     background-color: $color2;
      border-radius: 9px;
      box-shadow: 3px 3px;
  
@@ -56,11 +56,11 @@
           padding: 10px;
           border-radius: 9px;
           color: $color3;
-          background-color: $bgColor3;
+          background-color: $color2;
           cursor: pointer;
                    }
      button:hover {
-          background-color: $bgColor2;
+          background-color: $color2;
      }
 
      

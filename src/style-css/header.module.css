@@ -5,8 +5,8 @@
   width: 100%;
   text-align: center;
   font-size: 60px;
-  color: #cef132;
-  background-color: #7f810c; }
+  color: #f0f9fb;
+  background-color: #1968AB; }
   #container #header {
     display: flex;
     background-color: black;
@@ -21,7 +21,7 @@
       #container #header #left div,
       #container #header #right div {
         height: 50px;
-        background-color: #7f810c; }
+        background-color: #1968AB; }
     #container #header #middle {
       display: flex;
       flex-direction: column;
@@ -29,7 +29,7 @@
       justify-content: flex-start;
       width: 40%;
       border-radius: 0px 0px 150px 150px;
-      background-color: #7f810c;
+      background-color: #1968AB;
       z-index: 2; }
       #container #header #middle div {
         display: flex;
@@ -38,7 +38,7 @@
         z-index: 0;
         width: 100%;
         height: 50px;
-        background-color: #7f810c; }
+        background-color: #1968AB; }
         #container #header #middle div div {
           width: auto;
           position: absolute;

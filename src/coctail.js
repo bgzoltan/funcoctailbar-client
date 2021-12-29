@@ -24,10 +24,11 @@ function Coctail() {
     width: "280px",
     height: "50px",
     margin: "0px",
+    padding: "0px",
     border: "none",
-    color: "rgb(212, 241, 50)",
-    backgroundColor: "#7F810C",
-    textShadow: "2px 2px black",
+    color: "rgb(240, 249, 251)",
+    backgroundColor: "#1968AB",
+    textShadow: "1px 1px black",
     boxShadow: "none",
     cursor: "pointer"
   };
@@ -37,7 +38,7 @@ function Coctail() {
   function createNewElementStyle(
     title, // I use this property to identify the element - which button belongs to
     text, // This is the text that appears on the button
-    top, // Absolute bosition of the character positioned to the "button" parent ellement
+    top, // Absolute position of the character positioned to the "button" parent ellement
     charWidth, // This is the number of pixels betwen the button characters
     transition, // Time of animation
     transitionDelay, // Delaying time between the animated characters
@@ -66,13 +67,13 @@ function Coctail() {
   }
 
   // Creating animated character elements for button1 width the basic style
-  const button1Text = "Search a random Coctail";
+  const button1Text = "Random Coctail";
   createNewElementStyle("button1", button1Text, 10, 10, 0, 0, 0);
   const [button1, setButton1] = useState(newElement);
 
   // Creating animated character elements for button2 width the basic style
   newElement = <></>;
-  const button2Text = "Search a Coctail by name";
+  const button2Text = "Coctail by name";
   createNewElementStyle("button2", button2Text, 10, 10, 0, 0, 0);
   const [button2, setButton2] = useState(newElement);
 
@@ -165,6 +166,7 @@ function Coctail() {
 
       if (promise.status === 200) {
         const data = await promise.json();
+        console.log(data);
         setCoctails(data.drinks);
       } else {
         setError(true);

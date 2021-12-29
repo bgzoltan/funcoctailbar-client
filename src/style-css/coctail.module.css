@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
 #mainContainer {
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -15,7 +15,7 @@
     flex-direction: column;
     position: relative;
     font-size: 40px;
-    color: #7f810c;
+    color: #1968AB;
     text-align: center;
     flex-grow: 1; }
     #mainContainer #container #pictureBack {
@@ -37,21 +37,20 @@
         #mainContainer #container #pictureBack #left #picture {
           opacity: 1;
           border-radius: 50%;
-          border: 15px solid #7f810c;
+          border: 15px solid #1968AB;
           width: 500px; }
       #mainContainer #container #pictureBack #right {
         width: 60%; }
         #mainContainer #container #pictureBack #right #details {
           margin-left: 100px;
-          width: 300px;
+          width: 320px;
           height: 720px;
           padding: 0px;
-          color: #b6f33c;
-          background-color: rgba(153, 49, 49, 0);
+          color: #f0f9fb;
           background-repeat: no-repeat;
           background-size: contain;
           opacity: 0.8;
-          background-image: url("..//images/bottle-background-new2.png");
+          background-image: url("..//images/bottle-background.png");
           transform: rotate(-20deg);
           border-radius: 50px;
           display: flex;
@@ -73,22 +72,23 @@
             padding: 0px;
             margin: 0px;
             padding-top: 0px;
-            font-size: 21px;
-            width: 140px;
+            font-size: 24px;
+            width: 200px;
             list-style: none; }
             #mainContainer #container #pictureBack #right #details ul li {
               text-align: left;
               text-shadow: 1px 1px black;
               width: 200px;
-              line-height: 22px; }
+              line-height: 23px; }
           #mainContainer #container #pictureBack #right #details p {
             box-sizing: border-box;
             text-align: justify;
             width: 300px;
             padding: 21px;
             margin: 0px;
-            font-size: 21px;
-            text-shadow: 1px 1px black; }
+            font-size: 24px;
+            text-shadow: 1px 1px black;
+            line-height: 23px; }
         #mainContainer #container #pictureBack #right #details:hover {
           transform: rotate(-35deg); }
   #mainContainer #coctailListContainer {
@@ -105,15 +105,15 @@
       #mainContainer #coctailListContainer #coctailOfListedCoctails #picture {
         opacity: 1;
         border-radius: 50%;
-        border: 15px solid #7f810c;
+        border: 15px solid #1968AB;
         width: 300px; }
       #mainContainer #coctailListContainer #coctailOfListedCoctails #name {
         font-size: 30px;
-        color: whitesmoke; }
+        color: #f0f9fb; }
   #mainContainer #navigation {
     position: absolute;
-    font-family: 'Caveat', cursive;
-    top: -90px;
+    font-family: "Caveat", cursive;
+    top: -100px;
     left: 0px;
     width: 100%;
     display: flex; }

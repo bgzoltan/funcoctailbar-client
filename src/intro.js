@@ -40,7 +40,9 @@ function Intro({ setIsIntro }) {
             width: `${width}`,
             height: `${height}`,
             color: `${color}`,
+            border: "1px solid white",
             fontSize: "50px",
+            fontFamily: "Caveat, cursive",
             backgroundColor: `${bgColor}`,
             transform: `translate(${targetX.toString() + "px"},${
               targetY.toString() + "px"
@@ -61,13 +63,13 @@ function Intro({ setIsIntro }) {
   useEffect(() => {
     // Creating box objects
 
-    const box1 = new Box("box1", 100, 100, "blue");
-    const box2 = new Box("box2", 100, 100, "red");
-    const box3 = new Box("box3", 100, 100, "yellow");
-    const box4 = new Box("box4", 100, 100, "pink");
-    const box5 = new Box("box5", 100, 100, "green");
-    const box6 = new Box("box6", 100, 100, "black");
-    const box7 = new Box("box7", 100, 100, "orange");
+    const box1 = new Box("box1", 100, 100, "#1968AB");
+    const box2 = new Box("box2", 100, 100, "#1968AB");
+    const box3 = new Box("box3", 100, 100, "#1968AB");
+    const box4 = new Box("box4", 100, 100, "#1968AB");
+    const box5 = new Box("box5", 100, 100, "#1968AB");
+    const box6 = new Box("box6", 100, 100, "#1968AB");
+    const box7 = new Box("box7", 100, 100, "#1968AB");
     const delay = (maxTransitionTime) => {
       //  Box display delaying between different box positions - the delay time is the maximum transition time in the position group
       return new Promise(function (resolve) {
@@ -114,6 +116,7 @@ function Intro({ setIsIntro }) {
       // Positioning and timing the boxes in groups - grouped boxes are moving together
       const wHeight = window.innerHeight;
       const centerPos = (wHeight - 100) / 2;
+      console.log(centerPos);
       const wWidth = window.innerWidth;
       const startPos = (wWidth - numOfBoxes * 100) / 2;
       const moveTime = 5; // It takes moveTime seconds to move the box from one position to another
