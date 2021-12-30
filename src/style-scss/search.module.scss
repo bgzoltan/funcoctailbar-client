@@ -3,20 +3,19 @@
 #container {
      font-family: "Caveat", cursive;
      display: flex;
-     z-index:2;
+     z-index: 2;
      flex-direction: column;
      align-items: center;
      position: absolute;
      left: calc((100% - 500px) / 2);
      top: 200px;
      width: 500px;
-     height: 300px;
+     height: auto;
      text-align: center;
-          color: $color1;
+     color: $color1;
      background-color: $color2;
      border-radius: 9px;
-     box-shadow: 3px 3px;
- 
+
      h2 {
           margin: 0px;
           margin-top: 10px;
@@ -32,18 +31,18 @@
      }
      input {
           font-family: "Caveat", cursive;
+          width: 80%;
           font-size: $M;
           margin: 0px;
           padding: 0px;
           margin-left: 5px;
           font-size: $M;
      }
-     #error{
-          color:$color3;
-             margin: 10px;
-
+     #error {
+          color: $color3;
+          margin: 10px;
      }
-     #check{
+     #check {
           margin: 10px;
           font-size: $XL;
           transform: scale(2);
@@ -58,10 +57,21 @@
           color: $color3;
           background-color: $color2;
           cursor: pointer;
-                   }
+     }
      button:hover {
           background-color: $color2;
      }
+}
 
-     
+@media only screen and (max-width: 768px) {
+     #container {
+          margin-left: calc(20vw / 2);
+          position: static;
+          margin-top: 20px;
+          width: 80%;
+          height: auto;
+          button {
+               width: 80%;
+          }
+     }
 }

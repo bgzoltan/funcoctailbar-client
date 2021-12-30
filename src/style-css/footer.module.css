@@ -7,4 +7,15 @@
   color: #f0f9fb;
   background-color: #1968AB; }
 
+@media only screen and (max-width: 600px) {
+  #container {
+    font-family: "Caveat", cursive;
+    width: 100%;
+    text-align: center;
+    font-size: 21.6px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #f0f9fb;
+    background-color: #1968AB; } }
+
 /*# sourceMappingURL=footer.module.css.map */

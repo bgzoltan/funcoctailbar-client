@@ -8,3 +8,17 @@
      color: $color1;
      background-color: $color2;
 }
+
+@media only screen and (max-width: 600px) {
+     #container {
+          font-family: "Caveat", cursive;
+          width: 100%;
+          text-align: center;
+          font-size: $S*1.2;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          color: $color1;
+          background-color: $color2;
+     }
+     
+}

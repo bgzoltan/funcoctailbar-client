@@ -45,4 +45,10 @@
           top: 20px;
           text-shadow: 2px 2px black; }
 
+@media only screen and (max-width: 768px) {
+  #container {
+    font-size: 30px; }
+    #container #header #middle div div {
+      top: 0px; } }
+
 /*# sourceMappingURL=header.module.css.map */

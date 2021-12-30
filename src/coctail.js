@@ -1,6 +1,8 @@
 import style from "./style-css/coctail.module.css";
 import React, { useState } from "react";
 import Search from "./searchbyname";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 function Coctail() {
   const [coctails, setCoctails] = useState([]); // List of cotails
@@ -14,25 +16,64 @@ function Coctail() {
   const [isDisplayCoctail, setIsDisplay] = useState(false); // If true the selected coctail will appear
   const [isSearchBar, setIsSearchBar] = useState(false);
 
-  // Styling buttons --------------------------------------------------------------------------------------- START
+  const [hambOpened, setHambOpened] = useState(false);
 
-  const btnStyle = {
-    // "button" element style without hover - this element contains the characters;
-    position: "relative",
-    fontFamily: "'Caveat', cursive",
-    fontSize: "28px",
-    width: "280px",
-    height: "50px",
-    margin: "0px",
-    padding: "0px",
-    border: "none",
-    color: "rgb(240, 249, 251)",
-    backgroundColor: "#1968AB",
-    textShadow: "1px 1px black",
-    boxShadow: "none",
-    cursor: "pointer"
+  // Close the burger menu after 5 seconds if the user doesn't do that
+  const hamb = () => {
+    const newHambOpened = !hambOpened;
+    setHambOpened(newHambOpened);
   };
 
+  // Styling buttons --------------------------------------------------------------------------------------- START
+  let width = window.innerWidth;
+  console.log("Window belső méret:", width);
+  let btnStyle;
+  let transitionSpeed;
+  let transitionDelay;
+  let transitionStep;
+
+  if (width >= 768) {
+    btnStyle = {
+      // "button" element style without hover - this element contains the characters;
+      position: "relative",
+      fontFamily: "'Caveat', cursive",
+      fontSize: "28px",
+      width: "280px",
+      height: "50px",
+      margin: "0px",
+      padding: "0px",
+      border: "none",
+      color: "rgb(240, 249, 251)",
+      backgroundColor: "#1968AB",
+      textShadow: "1px 1px black",
+      boxShadow: "none",
+      cursor: "pointer"
+    };
+    transitionSpeed = 0.5;
+    transitionDelay = 0.2;
+    transitionStep = 0.2;
+  } else {
+    btnStyle = {
+      // "button" element style without hover - this element contains the characters;
+      position: "relative",
+      fontFamily: "'Caveat', cursive",
+      fontSize: "25x",
+      width: "100%",
+      height: "50px",
+      margin: "0px",
+      padding: "0px",
+      border: "none",
+      color: "rgb(240, 249, 251)",
+      backgroundColor: "#1968AB",
+      textShadow: "1px 1px black",
+      boxShadow: "none",
+      cursor: "pointer"
+    };
+    transitionSpeed = 0;
+    transitionDelay = 0;
+    transitionStep = 0;
+  }
+  console.log("Delay:", transitionDelay, transitionSpeed, transitionStep);
   // Creating an element for every character of the button text
   let newElement = <></>; //
   function createNewElementStyle(
@@ -93,9 +134,9 @@ function Coctail() {
         button1Text,
         5,
         10,
-        0.5,
-        0.2,
-        0.2
+        transitionSpeed,
+        transitionDelay,
+        transitionStep
       );
       setButton1(newElement);
     } else if (hoveredElement.title === "button2") {
@@ -104,9 +145,9 @@ function Coctail() {
         button2Text,
         5,
         10,
-        0.5,
-        0.2,
-        0.2
+        transitionSpeed,
+        transitionDelay,
+        transitionStep
       );
       setButton2(newElement);
     }
@@ -122,9 +163,9 @@ function Coctail() {
         button1Text,
         10,
         10,
-        0.5,
-        0.2,
-        0.2
+        transitionSpeed,
+        transitionDelay,
+        transitionStep
       );
       setButton1(newElement);
     } else {
@@ -133,9 +174,9 @@ function Coctail() {
         button2Text,
         10,
         10,
-        0.5,
-        0.2,
-        0.2
+        transitionSpeed,
+        transitionDelay,
+        transitionStep
       );
       setButton2(newElement);
     }
@@ -190,24 +231,34 @@ function Coctail() {
     <div id={style.mainContainer}>
       {/* Navigation */}
       <nav id={style.navigation}>
-        <button
-          title="button1"
-          style={btnStyle}
-          onMouseOver={(e) => handleHover(e.target)}
-          onMouseOut={(e) => handleOut(e.target)}
-          onClick={(e) => searchByRandom()}
-        >
-          {button1}
-        </button>
-        <button
-          title="button2"
-          style={btnStyle}
-          onMouseOver={(e) => handleHover(e.target)}
-          onMouseOut={(e) => handleOut(e.target)}
-          onClick={(e) => searchByName(true)}
-        >
-          {button2}
-        </button>
+        <div id={hambOpened ? style.buttonsAppears : style.buttons}>
+          <button
+            title="button1"
+            style={btnStyle}
+            onMouseOver={(e) => handleHover(e.target)}
+            onMouseOut={(e) => handleOut(e.target)}
+            onClick={(e) => searchByRandom()}
+          >
+            {button1}
+          </button>
+          <button
+            title="button2"
+            style={btnStyle}
+            onMouseOver={(e) => handleHover(e.target)}
+            onMouseOut={(e) => handleOut(e.target)}
+            onClick={(e) => searchByName(true)}
+          >
+            {button2}
+          </button>
+        </div>
+        {/* Hamburger menu for mobile view */}
+        <div onClick={(e) => hamb()} id={style.hamburger}>
+          {hambOpened ? (
+            <AiOutlineCloseCircle size="1x" />
+          ) : (
+            <GiHamburgerMenu size="1x" />
+          )}
+        </div>
       </nav>
 
       {/* ERRORS appear here */}

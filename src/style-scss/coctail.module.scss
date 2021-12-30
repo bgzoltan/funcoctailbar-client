@@ -51,8 +51,8 @@
                          width: 320px;
                          height: 720px;
                          padding: 0px;
-                         color:$color3;
-                           background-repeat: no-repeat;
+                         color: $color3;
+                         background-repeat: no-repeat;
                          background-size: contain;
                          opacity: 0.8;
                          background-image: url("..//images/bottle-background.png");
@@ -141,22 +141,77 @@
           left: 0px;
           width: 100%;
           display: flex;
+          z-index: 3;
+          #buttons {
+               width: 95%;
+          }
+          #hamburger {
+               width: 5%;
+               color: white;
+               width: 50px;
+               height: 50px;
+               display: none;
+               background-color: $color2;
+          }
      }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
      #mainContainer {
           #container {
+               #pictureBack {
+                    flex-direction: column;
+                    background-size: cover;
+                    height: 100%;
+                    #left {
+                         width: 100%;
+           
+                         #picture {
+                              margin-top: 20px;
+                              margin-bottom: 20px;
+                              width: 80%;
+                         }
+                    }
+                    #right {
+                         #details {
+                              margin-left: calc((100vw - 300px) / 2); //Place bottle in the centre
+                              width: 300px; //
+                              transform: rotate(0deg);
+                         }
+                         #details:hover {
+                              transform: rotate(0deg);
+                         }
+                    }
+               }
+          }
+
+          #navigation {
+               position: absolute;
+               font-family: "Caveat", cursive;
+               top: -100px;
+               left: 0px;
                width: 100%;
                display: flex;
-               flex-direction: column;
-               margin: 0px;
-               #picture {
-                    width: 100%;
+               z-index: 3;
+
+               #buttons {
+                    display: flex;
+                    flex-direction: column;
+                    width: 90%;
+                    visibility: hidden;
                }
-               #details {
-                    width: 100%;
-                    padding: 10px;
+
+               #buttonsAppears {
+                    display: flex;
+                    flex-direction: column;
+                    width: 90%;
+                    visibility: visible;
+                    background-color: $color2;
+               }
+
+               #hamburger {
+                    width: 10%;
+                    display: block;
                }
           }
      }

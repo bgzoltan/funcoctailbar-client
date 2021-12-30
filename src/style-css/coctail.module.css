@@ -116,18 +116,56 @@
     top: -100px;
     left: 0px;
     width: 100%;
-    display: flex; }
+    display: flex;
+    z-index: 3; }
+    #mainContainer #navigation #buttons {
+      width: 95%; }
+    #mainContainer #navigation #hamburger {
+      width: 5%;
+      color: white;
+      width: 50px;
+      height: 50px;
+      display: none;
+      background-color: #1968AB; }
 
-@media only screen and (max-width: 600px) {
-  #mainContainer #container {
+@media only screen and (max-width: 768px) {
+  #mainContainer #container #pictureBack {
+    flex-direction: column;
+    background-size: cover;
+    height: 100%; }
+    #mainContainer #container #pictureBack #left {
+      width: 100%; }
+      #mainContainer #container #pictureBack #left #picture {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 80%; }
+    #mainContainer #container #pictureBack #right #details {
+      margin-left: calc((100vw - 300px) / 2);
+      width: 300px;
+      transform: rotate(0deg); }
+    #mainContainer #container #pictureBack #right #details:hover {
+      transform: rotate(0deg); }
+  #mainContainer #navigation {
+    position: absolute;
+    font-family: "Caveat", cursive;
+    top: -100px;
+    left: 0px;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    margin: 0px; }
-    #mainContainer #container #picture {
-      width: 100%; }
-    #mainContainer #container #details {
-      width: 100%;
-      padding: 10px; } }
+    z-index: 3; }
+    #mainContainer #navigation #buttons {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      visibility: hidden; }
+    #mainContainer #navigation #buttonsAppears {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      visibility: visible;
+      background-color: #1968AB; }
+    #mainContainer #navigation #hamburger {
+      width: 10%;
+      display: block; } }
 
 /*# sourceMappingURL=coctail.module.css.map */
