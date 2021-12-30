@@ -211,8 +211,12 @@
 
                #hamburger {
                     width: 10%;
-                    display: block;
-                    z-index: 4;
+                    height:90px;
+                    display: flex;
+                    margin-top:10px;
+                    align-items:flex-start;
+                    justify-content: center;
+                    // z-index: 4;
                }
           }
      }

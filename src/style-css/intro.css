@@ -5,4 +5,10 @@
   height: 100px;
   font-family: "Caveat", cursive; }
 
+#box1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
 /*# sourceMappingURL=intro.css.map */

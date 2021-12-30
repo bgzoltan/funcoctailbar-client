@@ -7,9 +7,12 @@
      height: 100px;
      font-family: "Caveat", cursive;
    }
-  //  #box1 {
-  //    background-color: red;
-  //  }
+   #box1 {
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+   }
   //  #box2 {
   //    background-color: rgb(43, 55, 158);
   //  }

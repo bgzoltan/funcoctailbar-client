@@ -6,22 +6,22 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 
 function Coctail() {
   const [coctails, setCoctails] = useState([]); // List of cotails
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(""); // Contains the user given search characters
   const [error, setError] = useState(false);
   const [alcoholic, setAlcoholic] = useState("Alcoholic");
   const [checkBox, setCheckBox] = useState(false); // Filter for alcoholic cotails
-  // The number of elements equal to the number of ingredients
-  let counter = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+
+  let counter = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; // The number of elements equal to the number of ingredients
 
   const [isSearchByName, setIsSearchByName] = useState(false); // If true the searchBar will popup
   const [isDisplayCoctail, setIsDisplay] = useState(false); // If true the selected coctail will appear
   const [isSearchBar, setIsSearchBar] = useState(false);
 
-  const [hambOpened, setHambOpened] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [hambOpened, setHambOpened] = useState(false); // Checking the state of hamburger menu in mobile view
+  const [loading, setLoading] = useState(false); // To display message until waiting for the server
 
-  // Close the burger menu after 5 seconds if the user doesn't do that
   const hamb = () => {
+    // Managing the hamburger menu open/close
     const newHambOpened = !hambOpened;
     setHambOpened(newHambOpened);
   };
@@ -33,6 +33,7 @@ function Coctail() {
   let transitionDelay;
   let transitionStep;
 
+  // Depending on the windows size I need to change the style of the buttons
   if (width >= 768) {
     btnStyle = {
       // "button" element style without hover - this element contains the characters;
@@ -70,9 +71,9 @@ function Coctail() {
       boxShadow: "none",
       cursor: "pointer"
     };
-    transitionSpeed = 0;
-    transitionDelay = 0;
-    transitionStep = 0;
+    transitionSpeed = 0; // It is needed to display or hide the buttons in small window sizes quickly
+    transitionDelay = 0; // It is needed to display or hide the buttons in small window sizes quickly
+    transitionStep = 0; // It is needed to display or hide the buttons in small window sizes quickly
   }
 
   // Creating an element for every character of the button text
@@ -215,6 +216,7 @@ function Coctail() {
       } else {
         setError(true);
         setTimeout(function () {
+          // Error message appears for 3 seconds
           setError(false);
         }, 3000);
       }
@@ -266,7 +268,7 @@ function Coctail() {
       {/* ERRORS appears here */}
       {error && (
         <div style={{ color: "white", width: "100%", height: "auto" }}>
-          Error with API
+          Not Found...
         </div>
       )}
 
@@ -277,7 +279,7 @@ function Coctail() {
             color: "white",
             width: "100%",
             height: "20px",
-            marginLeft: "calc((100vw - 16px) / 2)"
+            marginLeft: "calc((100vw - 6rem) / 2)"
           }}
         >
           Loading data...
