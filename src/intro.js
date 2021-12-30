@@ -12,6 +12,8 @@ function Intro({ setIsIntro }) {
   const [boxContainer6, setBoxContainer6] = useState("");
   const [boxContainer7, setBoxContainer7] = useState("");
 
+  let boxSize = 70; // Size of the boxes is 70x70 pixels
+
   //  I will create the moving boxes as the instances of this class
   class Box {
     constructor(id, width, height, bgColor) {
@@ -63,13 +65,13 @@ function Intro({ setIsIntro }) {
   useEffect(() => {
     // Creating box objects
 
-    const box1 = new Box("box1", 100, 100, "#1968AB");
-    const box2 = new Box("box2", 100, 100, "#1968AB");
-    const box3 = new Box("box3", 100, 100, "#1968AB");
-    const box4 = new Box("box4", 100, 100, "#1968AB");
-    const box5 = new Box("box5", 100, 100, "#1968AB");
-    const box6 = new Box("box6", 100, 100, "#1968AB");
-    const box7 = new Box("box7", 100, 100, "#1968AB");
+    const box1 = new Box("box1", boxSize, boxSize, "#1968AB");
+    const box2 = new Box("box2", boxSize, boxSize, "#1968AB");
+    const box3 = new Box("box3", boxSize, boxSize, "#1968AB");
+    const box4 = new Box("box4", boxSize, boxSize, "#1968AB");
+    const box5 = new Box("box5", boxSize, boxSize, "#1968AB");
+    const box6 = new Box("box6", boxSize, boxSize, "#1968AB");
+    const box7 = new Box("box7", boxSize, boxSize, "#1968AB");
     const delay = (maxTransitionTime) => {
       //  Box display delaying between different box positions - the delay time is the maximum transition time in the position group
       return new Promise(function (resolve) {
@@ -115,10 +117,10 @@ function Intro({ setIsIntro }) {
     async function moves() {
       // Positioning and timing the boxes in groups - grouped boxes are moving together
       const wHeight = window.innerHeight;
-      const centerPos = (wHeight - 100) / 2;
-      console.log(centerPos);
       const wWidth = window.innerWidth;
-      const startPos = (wWidth - numOfBoxes * 100) / 2;
+      const centerPos = (wWidth - boxSize) / 2;
+      const xPos = -boxSize; // Starting X position - the boxes starts to move from here
+      const yPos = (wHeight - numOfBoxes * boxSize) / 2;
       const moveTime = 5; // It takes moveTime seconds to move the box from one position to another
       const textOfBoxes = "COCTAIL";
 
@@ -126,112 +128,112 @@ function Intro({ setIsIntro }) {
       //  We can pass: x position, y position,, the speed of moving, the background picture, a character (displayed on the box), the color of the character
 
       setElements(
-        box1.move(startPos, -100, moveTime),
-        box2.move(startPos + 100, wHeight + 100, moveTime),
-        box3.move(startPos + 200, -100, moveTime),
-        box4.move(startPos + 300, wHeight + 100, moveTime),
-        box5.move(startPos + 400, -100, moveTime),
-        box6.move(startPos + 500, wHeight + 100, moveTime),
-        box7.move(startPos + 600, -100, moveTime)
+        box1.move(xPos, yPos, moveTime),
+        box2.move(xPos + wWidth, yPos + boxSize, moveTime),
+        box3.move(xPos, yPos + 2 * boxSize, moveTime),
+        box4.move(xPos + wWidth, yPos + 3 * boxSize, moveTime),
+        box5.move(xPos, yPos + 4 * boxSize, moveTime),
+        box6.move(xPos + wWidth, yPos + 5 * boxSize, moveTime),
+        box7.move(xPos, yPos + 6 * boxSize, moveTime)
       );
       await delay(0); // Delaying until the next position
 
       // 2. position
       setElements(
-        box1.move(startPos, centerPos, moveTime),
-        box2.move(startPos + 100, centerPos, moveTime),
-        box3.move(startPos + 200, centerPos, moveTime),
-        box4.move(startPos + 300, centerPos, moveTime),
-        box5.move(startPos + 400, centerPos, moveTime),
-        box6.move(startPos + 500, centerPos, moveTime),
-        box7.move(startPos + 600, centerPos, moveTime)
+        box1.move(centerPos, yPos, moveTime),
+        box2.move(centerPos, yPos + boxSize, moveTime),
+        box3.move(centerPos, yPos + 2 * boxSize, moveTime),
+        box4.move(centerPos, yPos + 3 * boxSize, moveTime),
+        box5.move(centerPos, yPos + 4 * boxSize, moveTime),
+        box6.move(centerPos, yPos + 5 * boxSize, moveTime),
+        box7.move(centerPos, yPos + 6 * boxSize, moveTime)
       );
       await delay(moveTime); // Delaying until the next position
 
       // 3. position
       setElements(
-        box1.move(startPos + 300, centerPos, moveTime),
-        box2.move(startPos + 300, centerPos, moveTime),
-        box3.move(startPos + 300, centerPos, moveTime),
-        box4.move(startPos + 300, centerPos, moveTime),
-        box5.move(startPos + 300, centerPos, moveTime),
-        box6.move(startPos + 300, centerPos, moveTime),
-        box7.move(startPos + 300, centerPos, moveTime)
+        box1.move(centerPos, yPos + 3 * boxSize, moveTime),
+        box2.move(centerPos, yPos + 3 * boxSize, moveTime),
+        box3.move(centerPos, yPos + 3 * boxSize, moveTime),
+        box4.move(centerPos, yPos + 3 * boxSize, moveTime),
+        box5.move(centerPos, yPos + 3 * boxSize, moveTime),
+        box6.move(centerPos, yPos + 3 * boxSize, moveTime),
+        box7.move(centerPos, yPos + 3 * boxSize, moveTime)
       );
       await delay(moveTime); // Delaying until the next position
 
       // 4. position
       setElements(
-        box1.move(startPos, centerPos, moveTime - 4),
-        box2.move(startPos + 100, centerPos, moveTime - 3),
-        box3.move(startPos + 200, centerPos, moveTime - 2),
-        box4.move(startPos + 300, centerPos, moveTime - 1),
-        box5.move(startPos + 400, centerPos, moveTime - 2),
-        box6.move(startPos + 500, centerPos, moveTime - 3),
-        box7.move(startPos + 600, centerPos, moveTime - 4)
+        box1.move(centerPos, yPos, moveTime - 4),
+        box2.move(centerPos, yPos + boxSize, moveTime - 3),
+        box3.move(centerPos, yPos + 2 * boxSize, moveTime - 2),
+        box4.move(centerPos, yPos + 3 * boxSize, moveTime - 1),
+        box5.move(centerPos, yPos + 4 * boxSize, moveTime - 2),
+        box6.move(centerPos, yPos + 5 * boxSize, moveTime - 3),
+        box7.move(centerPos, yPos + 6 * boxSize, moveTime - 4)
       );
       await delay(moveTime); // Delaying until the next position
 
       // 5. position
       setElements(
         box1.move(
-          startPos,
           centerPos,
+          yPos,
           moveTime - 4,
           "",
           textOfBoxes.charAt(0),
           "white"
         ),
         box2.move(
-          startPos + 100,
           centerPos,
+          yPos + boxSize,
           moveTime - 3,
           "",
           textOfBoxes.charAt(1),
           "white"
         ),
         box3.move(
-          startPos + 200,
           centerPos,
+          yPos + 2 * boxSize,
           moveTime - 2,
           "",
           textOfBoxes.charAt(2),
           "white"
         ),
         box4.move(
-          startPos + 300,
           centerPos,
+          yPos + 3 * boxSize,
           moveTime - 4,
           "",
           textOfBoxes.charAt(3),
           "white"
         ),
         box5.move(
-          startPos + 400,
           centerPos,
+          yPos + 4 * boxSize,
           moveTime - 2,
           "",
           textOfBoxes.charAt(4),
           "white"
         ),
         box6.move(
-          startPos + 500,
           centerPos,
+          yPos + 5 * boxSize,
           moveTime - 3,
           "",
           textOfBoxes.charAt(5),
           "white"
         ),
         box7.move(
-          startPos + 600,
           centerPos,
+          yPos + 6 * boxSize,
           moveTime - 4,
           "",
           textOfBoxes.charAt(6),
           "white"
         )
       );
-      await delay(moveTime); // Delaying until the next position
+      await delay(2); // Delaying until the next position
       setIsIntro(false);
     }
     moves();
@@ -246,7 +248,6 @@ function Intro({ setIsIntro }) {
       {boxContainer5}
       {boxContainer6}
       {boxContainer7}
-      {/* {myState.a1} */}
     </div>
   );
 }

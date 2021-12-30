@@ -166,6 +166,7 @@
       background-color: #1968AB; }
     #mainContainer #navigation #hamburger {
       width: 10%;
-      display: block; } }
+      display: block;
+      z-index: 4; } }
 
 /*# sourceMappingURL=coctail.module.css.map */

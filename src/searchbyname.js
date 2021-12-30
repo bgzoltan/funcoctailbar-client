@@ -1,5 +1,5 @@
 import style from "./style-css/search.module.css";
-import React, { useState } from "react";
+import React from "react";
 
 export default function SearchByName({
   setIsSearchByName,
@@ -10,10 +10,10 @@ export default function SearchByName({
   setAlcoholic,
   setError,
   isSearchBar,
-  setIsSearchBar
+  setIsSearchBar,
+  checkBox,
+  setCheckBox
 }) {
-  const [checkBox, setCheckBox] = useState(false);
-
   // Searching the coctail the user has entered
   const searchTheCoctail = () => {
     const loadTheCoctails = async () => {
@@ -32,10 +32,14 @@ export default function SearchByName({
 
       // Error checking...
       if (promise.status !== 200) {
-        setError(true);
-        setTimeout(function () {
-          setError(false);
-        }, 3000);
+        // I NEED TO FIX IT ON SERVER SIDE - in some cases there is a bad response example searhc: "g4"
+
+        setCoctails([]);
+
+        // setError(true);
+        // setTimeout(function () {
+        //   setError(false);
+        // }, 3000);
       } else {
         const data = await promise.json();
         setIsSearchByName(true);
