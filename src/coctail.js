@@ -60,7 +60,7 @@ function Coctail() {
       position: "relative",
       fontFamily: "'Caveat', cursive",
       fontSize: "26px",
-      width: "111%",
+      width: "100%",
       height: "50px",
       margin: "0px",
       padding: "0px",

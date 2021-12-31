@@ -119,9 +119,9 @@
     display: flex;
     z-index: 3; }
     #mainContainer #navigation #buttons {
-      width: 95%; }
+      width: 90%; }
     #mainContainer #navigation #hamburger {
-      width: 5%;
+      width: 10%;
       color: white;
       width: 50px;
       height: 50px;
@@ -146,7 +146,7 @@
     #mainContainer #container #pictureBack #right #details:hover {
       transform: rotate(0deg); }
   #mainContainer #navigation {
-    position: relative;
+    position: absolute;
     font-family: "Caveat", cursive;
     top: -100px;
     left: 0px;
@@ -156,7 +156,6 @@
     #mainContainer #navigation #buttons {
       display: flex;
       flex-direction: column;
-      width: 90%;
       visibility: hidden; }
     #mainContainer #navigation #buttonsAppears {
       position: absolute;
