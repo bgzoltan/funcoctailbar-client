@@ -186,13 +186,13 @@
           }
 
           #navigation {
-               position: absolute;
+               position: relative;
                font-family: "Caveat", cursive;
                top: -100px;
                left: 0px;
                width: 100%;
                display: flex;
-               z-index: 3;
+               z-index: 2;
 
                #buttons {
                     display: flex;
@@ -202,20 +202,23 @@
                }
 
                #buttonsAppears {
+                    position: absolute;
                     display: flex;
                     flex-direction: column;
-                    width: 90%;
+                    width: 100%;
                     visibility: visible;
                     background-color: $color2;
+                    z-index: 3;
                }
 
                #hamburger {
-                    width: 10%;
-                    height:10px;
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    width: 5%;
+                 
+                    height:40px;
                     display: flex;
-                    margin-top:10px;
-                    align-items:flex-start;
-                    justify-content: center;
                     z-index: 4;
                }
           }

@@ -47,6 +47,7 @@
           margin: 10px;
           font-size: $XL;
           transform: scale(2);
+          background-color: $color3;
      }
      button {
           font-family: "Caveat", cursive;
@@ -56,7 +57,9 @@
           padding: 10px;
           border-radius: 9px;
           color: $color3;
-          background-color: $color2;
+          background-color: $color4;
+          border: none;
+          box-shadow: 2px 2px $color5;
           cursor: pointer;
      }
      button:hover {

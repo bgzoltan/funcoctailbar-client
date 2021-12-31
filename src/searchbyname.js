@@ -60,8 +60,8 @@ export default function SearchByName({
     <div>
       {isSearchBar && (
         <div id={style.container}>
-          <h2>Searching bar</h2>
-          <label>A word in the coctail's name:</label>
+          <h2>Searching</h2>
+          <label>a word in the coctail's name:</label>
           <input onChange={(e) => setSearch(e.target.value)}></input>
           <label>Non alcoholic filter</label>
           <input

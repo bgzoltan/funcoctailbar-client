@@ -40,7 +40,8 @@
   #container #check {
     margin: 10px;
     font-size: 60px;
-    transform: scale(2); }
+    transform: scale(2);
+    background-color: #f0f9fb; }
   #container button {
     font-family: "Caveat", cursive;
     font-size: 30px;
@@ -49,7 +50,9 @@
     padding: 10px;
     border-radius: 9px;
     color: #f0f9fb;
-    background-color: #1968AB;
+    background-color: #6890b3;
+    border: none;
+    box-shadow: 2px 2px #07253f;
     cursor: pointer; }
   #container button:hover {
     background-color: #1968AB; }

@@ -146,31 +146,33 @@
     #mainContainer #container #pictureBack #right #details:hover {
       transform: rotate(0deg); }
   #mainContainer #navigation {
-    position: absolute;
+    position: relative;
     font-family: "Caveat", cursive;
     top: -100px;
     left: 0px;
     width: 100%;
     display: flex;
-    z-index: 3; }
+    z-index: 2; }
     #mainContainer #navigation #buttons {
       display: flex;
       flex-direction: column;
       width: 90%;
       visibility: hidden; }
     #mainContainer #navigation #buttonsAppears {
+      position: absolute;
       display: flex;
       flex-direction: column;
-      width: 90%;
+      width: 100%;
       visibility: visible;
-      background-color: #1968AB; }
+      background-color: #1968AB;
+      z-index: 3; }
     #mainContainer #navigation #hamburger {
-      width: 10%;
-      height: 10px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 5%;
+      height: 40px;
       display: flex;
-      margin-top: 10px;
-      align-items: flex-start;
-      justify-content: center;
       z-index: 4; } }
 
 /*# sourceMappingURL=coctail.module.css.map */
